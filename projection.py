@@ -90,6 +90,14 @@ class Projection():
         """
         return self.data_ninstances
 
+    def get_projection(self):
+        """
+        Get projection.
+
+        Returns the projection stored in the object.
+        """
+        return self.projection
+
     def plot(self):
         """
         Plot the projection.
@@ -101,7 +109,7 @@ class Projection():
         mpl.show()
 
 
-def test():
+def run():
     """
     Run function.
     """
@@ -109,4 +117,4 @@ def test():
     print("You have to implement a projection technique.")
 
 if __name__ == "__main__":
-    test()
+    run()

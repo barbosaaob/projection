@@ -1,6 +1,10 @@
 from __future__ import print_function
-import numpy as np
 import projection
+try:
+    import numpy as np
+except ImportError as msg:
+    error = ", please install the following packages:\n"
+    error += "    NumPy      (http://www.numpy.org)\n"
 
 
 class Ortho(projection.Projection):
@@ -25,7 +29,7 @@ class Ortho(projection.Projection):
         self.projection = proj
 
 
-def test():
+def run():
     import time
     import sys
     print("Loading data set... ", end="")
@@ -44,4 +48,4 @@ def test():
 
 
 if __name__ == "__main__":
-    test()
+    run()
